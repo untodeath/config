@@ -1,0 +1,137 @@
+/* https://github.com/alexays/waybar/wiki/styling */
+
+@define-color background #1d2021;
+@define-color foreground #ebdbb2;
+@define-color	black #282828;
+@define-color red #cc241d;
+@define-color green #98971a;
+@define-color yellow #d79921;
+@define-color blue #458588;
+@define-color magenta #b16286;
+@define-color cyan #689d6a;
+@define-color white #a89984;
+
+* {
+	font-family: Ionicons, Inter, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+window#waybar {
+	background-color: transparent;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+button {
+	/* Avoid rounded borders under each button name */
+	border: none;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+	background: inherit;
+}
+
+#workspaces button {
+	background-color: transparent;
+	border-radius: 3px;
+	color: @foreground;
+	padding: 6px;
+}
+
+#workspaces button:not(:last-child) {
+	margin-right: 3px;
+}
+
+#workspaces button:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+	box-shadow: none;
+}
+
+#workspaces button.focused {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+#workspaces button.urgent {
+	background-color: @red;
+}
+
+#mode {
+	background-color: @yellow;
+	color: @background;
+}
+
+.modules-left,
+.modules-right {
+	background-color: @background;
+	border-radius: 6px;
+	margin-bottom: 24px;
+	padding: 6px;
+}
+
+.modules-left {
+	margin-left: 24px;
+}
+
+.modules-right {
+	margin-right: 24px;
+	padding-right: 20px;
+}
+
+#battery,
+#clock,
+#network,
+#tray {
+	color: @foreground;
+}
+
+label:focus {
+	background-color: #000000;
+}
+
+#battery.charging,
+#battery.plugged {
+	color: @red;
+}
+
+@keyframes blink {
+	to {
+		background-color: #ffffff;
+		color: #000000;
+	}
+}
+
+#battery.critical:not(.charging) {
+	animation-name: blink;
+	animation-direction: alternate;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	color: @red;
+}
+
+#keyboard-state {
+	background: @yellow;
+	color: @background;
+	margin: 0 6px;
+	min-width: 16px;
+}
+
+#keyboard-state > label {
+	padding: 0 6px;
+}
+
+#keyboard-state > label.locked {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+#tray > .passive {
+	-gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+	-gtk-icon-effect: highlight;
+	background-color: @yellow;
+}

@@ -1,0 +1,73 @@
+{
+	// https://github.com/Alexays/Waybar/wiki/Styling
+
+	// Options
+	"layer": "top",
+	"modules-center": [],
+	"modules-left": ["sway/workspaces", "sway/mode", "custom/media", "keyboard-state"],
+	"modules-right": ["tray", "battery", "battery#bat2", "network", "clock"],
+	"position": "bottom",
+	"spacing": 12,
+
+	// Modules
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "<span font=\"16\"></span> {capacity}% {icon}",
+		"format-charging": " {capacity}%",
+		"format-full": "<span font=\"16\"></span>",
+		"format-icons": ["<span font=\"16\"></span>", "<span font=\"16\"></span>"],
+		"format-plugged": "<span font=\"16\"></span> {capacity}%"
+	},
+	"battery#bat2": {
+		"bat": "BAT2"
+	},
+	"bluetooth": {
+		"format": "<span font=\"16\"></span> {status}",
+		"format-connected": "<span font=\"16\"></span> {num_connections} connected",
+		"format-disabled": "",
+		"tooltip-format": "{controller_alias}\t{controller_address}",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+	},
+	"clock": {
+		"format": "{:%a %b %e, %I:%M %p}",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+	},
+	"keyboard-state": {
+		"capslock": true,
+		"format": "{icon} {name}",
+		"format-icons": {
+			"locked": "",
+			"unlocked": ""
+		},
+		"numlock": true
+	},
+	"network": {
+		"format-disconnected": "<span font=\"16\"></span> Disconnected",
+		"format-ethernet": "<span font=\"16\"></span>",
+		"format-linked": "<span font=\"16\"></span> (No IP)",
+		"format-wifi": "<span font=\"16\"></span>",
+		"tooltip-format": "{ifname} via {gwaddr} | {essid}{ipaddr}/{cidr}"
+	},
+	"pulseaudio": {
+		"format": "<span font=\"16\">{icon}</span> {volume}%",
+		"format-bluetooth": "<span font=\"16\">{icon}</span> {volume}%",
+		"format-icons": {
+		"format-muted": "",
+			"default": ["", "", ""]
+		},
+		"ignored-sinks": ["Easy Effects Sink"],
+		"scroll-step": 1
+	},
+	"sway/mode": {
+		"format": "<span style=\"italic\">{}</span>"
+	},
+	"tray": {
+		"icon-size": 24,
+		"spacing": 12
+	}
+}

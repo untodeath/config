@@ -1,0 +1,92 @@
+# https://github.com/swaywm/sway/wiki
+
+set $super Mod4
+
+# Apps: Super+{Key}
+set $menu wofi --show run
+set $term alacritty
+
+bindsym $super+space exec $menu
+bindsym $super+Return exec $term
+
+exec --no-startup-id alacritty
+exec --no-startup-id firefox-wayland
+
+bar {
+	swaybar_command waybar
+}
+
+# Controls: Super+Shift+{Direction,Key}
+set $left	h
+set $down	j
+set $up		k
+set $right	l
+
+bindsym $super+Shift+b splith
+bindsym $super+Shift+c reload
+bindsym $super+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym $super+Shift+f fullscreen
+bindsym $super+Shift+q kill
+bindsym $super+Shift+v splitv
+
+bindsym $super+Shift+$left move left
+bindsym $super+Shift+$down move down
+bindsym $super+Shift+$up move up
+bindsym $super+Shift+$right move right
+
+bindsym $super+Shift+1 move container to workspace number 1
+bindsym $super+Shift+2 move container to workspace number 2
+bindsym $super+Shift+3 move container to workspace number 3
+bindsym $super+Shift+4 move container to workspace number 4
+bindsym $super+Shift+5 move container to workspace number 5
+bindsym $super+Shift+6 move container to workspace number 6
+bindsym $super+Shift+7 move container to workspace number 7
+bindsym $super+Shift+8 move container to workspace number 8
+bindsym $super+Shift+9 move container to workspace number 9
+bindsym $super+Shift+0 move container to workspace number 10
+
+bindsym $super+Shift+space floating toggle
+floating_modifier $super normal
+
+# Navigation: Super+{Direction,Workspace}
+bindsym $super+$left focus left
+bindsym $super+$down focus down
+bindsym $super+$up focus up
+bindsym $super+$right focus right
+
+bindsym $super+1 workspace number 1
+bindsym $super+2 workspace number 2
+bindsym $super+3 workspace number 3
+bindsym $super+4 workspace number 4
+bindsym $super+5 workspace number 5
+bindsym $super+6 workspace number 6
+bindsym $super+7 workspace number 7
+bindsym $super+8 workspace number 8
+bindsym $super+9 workspace number 9
+bindsym $super+0 workspace number 10
+
+# Styles
+set $background #1d2021
+set $foreground #ebdbb2
+set $black	#282828
+set $red	#cc241d
+set $green	#98971a
+set $yellow	#d79921
+set $blue	#458588
+set $magenta	#b16286
+set $cyan	#689d6a
+set $white	#a89984
+
+client.background	$background
+client.focused		$background $background $foreground
+client.focused_inactive	$background $background $white
+client.unfocused	$background $background $white
+client.urgent           $red $red $foreground
+
+default_border normal
+font Inter 11
+gaps inner 24
+
+output * bg /home/austin/Documents/Wallpapers/33.png fill
+
+include /etc/sway/config.d/*

@@ -1,0 +1,57 @@
+# https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+
+window:
+  padding:
+    x: 24
+    y: 24
+  opacity: 0.95
+
+scrolling:
+  history: 100000
+  multiplier: 3
+
+font:
+  normal: 
+    family: "JetBrainsMonoNL Nerd Font"
+    style: "Regular"
+
+  bold: 
+    family: "JetBrainsMonoNL Nerd Font"
+    style: "Bold"
+  italic: 
+    family: "JetBrainsMonoNL Nerd Font"
+    style: "Italic"
+  bold_italic:
+    family: "JetBrainsMonoNL Nerd Font"
+    style: "Bold Italic"
+  size: 12
+
+colors:
+  primary:
+    background: "#1d2021"
+    foreground: "#ebdbb2"
+  normal:
+    black:   "#282828"
+    red:     "#cc241d"
+    green:   "#98971a"
+    yellow:  "#d79921"
+    blue:    "#458588"
+    magenta: "#b16286"
+    cyan:    "#689d6a"
+    white:   "#a89984"
+  bright:
+    black:   "#928374"
+    red:     "#fb4934"
+    green:   "#b8bb26"
+    yellow:  "#fabd2f"
+    blue:    "#83a598"
+    magenta: "#d3869b"
+    cyan:    "#8ec07c"
+    white:   "#ebdbb2"
+
+cursor:
+  blinking: "On"
+  blink_interval: 1000
+  blink_timeout: 0
+
+live_config_reload: true
