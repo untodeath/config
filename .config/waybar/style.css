@@ -24,8 +24,8 @@ window#waybar.hidden {
 	opacity: 0.2;
 }
 
+/* Avoid rounded borders under each button name */
 button {
-	/* Avoid rounded borders under each button name */
 	border: none;
 }
 

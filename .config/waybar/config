@@ -1,9 +1,8 @@
 {
-	// https://github.com/Alexays/Waybar/wiki/Styling
+	// https://github.com/Alexays/Waybar/wiki/Configuration
 
 	// Options
 	"layer": "top",
-	"modules-center": [],
 	"modules-left": ["sway/workspaces", "sway/mode", "custom/media", "keyboard-state"],
 	"modules-right": ["tray", "battery", "battery#bat2", "network", "clock"],
 	"position": "bottom",

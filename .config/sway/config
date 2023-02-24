@@ -17,9 +17,9 @@ bar {
 }
 
 # Controls: Super+Shift+{Direction,Key}
-set $left	h
-set $down	j
-set $up		k
+set $left		h
+set $down		j
+set $up			k
 set $right	l
 
 bindsym $super+Shift+b splith
@@ -66,22 +66,22 @@ bindsym $super+9 workspace number 9
 bindsym $super+0 workspace number 10
 
 # Styles
-set $background #1d2021
-set $foreground #ebdbb2
-set $black	#282828
-set $red	#cc241d
-set $green	#98971a
-set $yellow	#d79921
-set $blue	#458588
-set $magenta	#b16286
-set $cyan	#689d6a
-set $white	#a89984
+set $background	#1d2021
+set $foreground	#ebdbb2
+set $black			#282828
+set $red				#cc241d
+set $green			#98971a
+set $yellow			#d79921
+set $blue				#458588
+set $magenta		#b16286
+set $cyan				#689d6a
+set $white			#a89984
 
-client.background	$background
-client.focused		$background $background $foreground
+client.background				$background
+client.focused					$background $background $foreground
 client.focused_inactive	$background $background $white
-client.unfocused	$background $background $white
-client.urgent           $red $red $foreground
+client.unfocused				$background $background $white
+client.urgent						$red $red $foreground
 
 default_border normal
 font Inter 11

@@ -26,12 +26,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  "folke/which-key.nvim", -- Key hints
-	"mbbill/undotree", -- Undo
-	"tpope/vim-fugitive", -- Git
-	"tpope/vim-rhubarb", -- GitHub
-	"tpope/vim-sensible", -- Defaults
-	"tpope/vim-surround", -- Surroundings	
+  "folke/which-key.nvim",	-- Key hints
+	"mbbill/undotree",			-- Undo
+	"tpope/vim-fugitive",		-- Git
+	"tpope/vim-rhubarb",		-- GitHub
+	"tpope/vim-sensible",		-- Defaults
+	"tpope/vim-surround",		-- Surroundings	
 
 	{ -- Adds a buffer line
 		"akinsho/bufferline.nvim",
