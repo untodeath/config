@@ -87,6 +87,6 @@ default_border normal
 font Inter 11
 gaps inner 24
 
-output * bg /home/austin/Documents/Wallpapers/33.png fill
+output * bg /home/untodeath/.wallpapers/arrietty-33.png fill
 
 include /etc/sway/config.d/*
