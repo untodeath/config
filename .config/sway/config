@@ -3,7 +3,7 @@
 set $super Mod4
 
 # Apps: Super+{Key}
-set $menu wofi --show run
+set $menu wofi
 set $term alacritty
 
 bindsym $super+space exec $menu
@@ -11,6 +11,7 @@ bindsym $super+Return exec $term
 
 exec --no-startup-id alacritty
 exec --no-startup-id firefox-wayland
+exec --no-startup-id wlsunset
 
 bar {
 	swaybar_command waybar
